@@ -52,7 +52,7 @@ const theme = createTheme({
         "& label": {
           fontSize: "14px",
           fontWeight: "700",
-          color: "#7533E2",
+          color: "#cc542f",
           marginLeft: "3px",
           marginBottom: "4px",
           display: "block;",
@@ -240,7 +240,7 @@ const theme = createTheme({
         display: "flex",
         flexDirection: "column",
         position: "relative",
-        overflow:'hidden',
+        overflow: "hidden",
 
         "@media (max-width:599px)": {
           width: "100%",

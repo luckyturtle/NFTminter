@@ -22,11 +22,11 @@ const Account = ({ signerAddress }) => {
       setIsLoading(true);
       setNftData([]);
       let { data } = await axios({
-        method: 'get',
-        url: `https://api.covalenthq.com/v1/137/address/${signerAddress}/balances_v2/?nft=true`,
+        method: "get",
+        url: `https://api.covalenthq.com/v1/137/address/${signerAddress}/balances_v2/?format=JSON&nft=1&key=${process.env.covalent_key}`,
         headers: {
-          'Authorization': `Basic ${process.env.covalent_key}`
-        }
+          Authorization: `Basic ${process.env.covalent_key}`,
+        },
       });
       const items = data.data.items;
       // filter useful info from api
@@ -81,8 +81,9 @@ const Account = ({ signerAddress }) => {
         {/* to view the image */}
         <Modal
           open={modalState}
-          className={`${classes.modalContainer} ${modalImgProps.portrait ? classes.portrait : ''
-            }`}
+          className={`${classes.modalContainer} ${
+            modalImgProps.portrait ? classes.portrait : ""
+          }`}
           onClose={closeModal}
         >
           <div className={`${classes.modal} modal`}>
@@ -120,15 +121,15 @@ const useStyles = makeStyles((theme) => ({
   },
   portrait: {
     "& .modal": {
-      width: 'auto',
-      height: '90%',
+      width: "auto",
+      height: "90%",
 
       "& img": {
-        width: 'auto',
-        height: '100%',
-      }
-    }
-  }
+        width: "auto",
+        height: "100%",
+      },
+    },
+  },
 }));
 
 export default Account;

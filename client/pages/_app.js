@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import theme from  "../utils/theme";
+import theme from "../utils/theme";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/UI/Footer";
@@ -28,12 +28,15 @@ const App = ({ Component, pageProps }) => {
     <>
       <ThemeProvider theme={theme}>
         <Head>
-          <title>Polygon | NFT Minter</title>
+          <title>Philosophers | NFT Minter</title>
           <meta
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width"
           />
-           <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet"></link>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+            rel="stylesheet"
+          ></link>
         </Head>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />

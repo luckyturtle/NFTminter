@@ -61,7 +61,7 @@ const Form = ({
 
   // reset form
   const resetForm = () => {
-    setState({...initialState});
+    setState({ ...initialState });
   };
 
   // validate form
@@ -336,7 +336,7 @@ const Form = ({
       <Container className={classes.container}>
         <div className={classes.formContainer}>
           <div className="form-title">
-            <h3>Mint your NFT</h3>
+            <h3>Mint to be Inspired</h3>
           </div>
           <form
             noValidate
@@ -652,7 +652,7 @@ const useStyles = makeStyles((theme) => ({
       margin: "0",
 
       "& label": {
-        color: "#8247e5",
+        color: "#cc542f",
         textDecoration: "underline",
         cursor: "pointer",
 
@@ -751,7 +751,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   label: {
-    color: "#7533e2",
+    color: "#cc542f",
     fontSize: "14px",
     fontWeight: "bold",
     margin: 0,

@@ -1,11 +1,11 @@
-import React, { useState, useRef } from 'react';
-import Link from 'next/link';
+import React, { useState, useRef } from "react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 import { AppBar, Container } from "@material-ui/core";
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 
 import { BridgeIcon, MintIcon } from "./UI/Icons";
 import dynamic from "next/dynamic";
@@ -20,7 +20,7 @@ const Navbar = ({
   setSignerAddress,
   setNetworkId,
   setProviderMetamask,
-  setWeb3Instatce
+  setWeb3Instatce,
 }) => {
   const classes = useStyles();
   const router = useRouter();
@@ -39,7 +39,7 @@ const Navbar = ({
       <Container className={classes.container}>
         <div className={classes.flexContainer}>
           <Link href="/" style={{ display: "flex" }}>
-            <a> <img src="/logo.svg" alt="logo" className={classes.logo} /> </a>
+            <a></a>
           </Link>
 
           <div className={classes.navigationSection}>
@@ -48,19 +48,24 @@ const Navbar = ({
               ref={menuItemContainerRef}
             >
               <Link href="/">
-                <a className={router.pathname == "/" ? "menuItem active" : "menuItem"}>
+                <a
+                  className={
+                    router.pathname == "/" ? "menuItem active" : "menuItem"
+                  }
+                >
                   <MintIcon className="menuItemIcon" />
-                  Minter
+                  Eurika
                 </a>
               </Link>
-              <Link href="https://bridge.mintnft.today/">
-                <a className="menuItem">
-                  <BridgeIcon className="menuItemIcon active" />
-                  Bridge
-                </a>
-              </Link>
+
               <Link href="/account">
-                <a className={router.pathname == "/account" ? "menuItem active" : "menuItem"}>
+                <a
+                  className={
+                    router.pathname == "/account"
+                      ? "menuItem active"
+                      : "menuItem"
+                  }
+                >
                   <AccountCircleIcon className="menuItemIcon" />
                   Account
                 </a>
@@ -86,8 +91,8 @@ const Navbar = ({
         </div>
       </Container>
     </AppBar>
-  )
-}
+  );
+};
 
 const useStyles = makeStyles((theme) => ({
   ...theme.overrides.mui,
@@ -95,7 +100,7 @@ const useStyles = makeStyles((theme) => ({
     height: "80px",
     backgroundColor: "#fff",
     boxShadow: "none",
-    borderBottom: "2px solid #7533E2",
+    borderBottom: "2px solid #e39352",
     position: "relative",
   },
   flexContainer: {
@@ -114,16 +119,16 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     width: "100%",
     justifyContent: "space-between",
-    alignItems: 'center',
-    paddingLeft: '30px',
+    alignItems: "center",
+    paddingLeft: "30px",
     "@media (max-width:859px)": {
-      justifyContent: 'flex-end',
-    }
+      justifyContent: "flex-end",
+    },
   },
   menuItemContainer: {
     display: "flex",
     "@media (max-width:859px)": {
-      justifyContent: 'space-evenly',
+      justifyContent: "space-evenly",
       position: "absolute",
       backgroundColor: "white",
       width: "100%",
@@ -140,7 +145,7 @@ const useStyles = makeStyles((theme) => ({
       padding: "20px 0",
       height: "auto",
       transition: "all 0.5s ease",
-      borderBottom: "2px solid #7533E2",
+      borderBottom: "2px solid #e39352",
     },
 
     // menu items
@@ -152,7 +157,7 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: "700",
       textDecoration: "none",
       padding: "0 15px 0 12px",
-      border: "1px solid #E8E8E8",
+      border: "1px solid #ed4618",
       borderRadius: "19px",
       display: "flex",
       alignItems: "center",
@@ -160,29 +165,29 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "36px",
 
       "&.active": {
-        backgroundColor: "#8247E5",
+        backgroundColor: "#e39352",
         color: "#fff",
-        borderColor: "#8247E5",
+        borderColor: "#ed4618",
 
         "& svg": {
           fill: "#EDF0F7",
-        }
+        },
       },
 
       "&:hover": {
-        backgroundColor: "#8247E5",
+        backgroundColor: "#e39352",
         color: "#fff",
-        borderColor: "#8247E5",
+        borderColor: "#ed4618",
 
         "& svg": {
           fill: "#EDF0F7",
-        }
+        },
       },
 
       "@media (max-width:859px)": {
         textAlign: "center",
         lineHeight: "50px",
-        marginRight: '0'
+        marginRight: "0",
       },
     },
 
@@ -192,7 +197,7 @@ const useStyles = makeStyles((theme) => ({
       height: "20px",
       fill: "#6E798F",
       marginRight: "4px",
-      transition: 'none',
+      transition: "none",
     },
   },
   menuIcon: {

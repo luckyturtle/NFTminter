@@ -19,7 +19,11 @@ const Footer = () => {
       <Container className={classes.container}>
         <Grid container style={{ position: "relative", zIndex: "2" }}>
           <Grid item xs={12} sm={6}>
-            <img src="/images/polygon-logowhite.svg" alt="company logo" className={classes.logo} />
+            <img
+              src="/images/polygon-logowhite.svg"
+              alt="company logo"
+              className={classes.logo}
+            />
             <p className={classes.text}>
               Polygon is a protocol and a framework for building and connecting
               Ethereum-compatible blockchain networks
@@ -28,7 +32,7 @@ const Footer = () => {
           <Grid item xs={12} sm={6}>
             <div className={classes.smIconsContainer}>
               <a
-                href="https://twitter.com/0xPolygon"
+                href="https://twitter.com/Philosophers-NFT"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -37,7 +41,7 @@ const Footer = () => {
                 </div>
               </a>
               <a
-                href="https://discord.gg/polygon"
+                href="https://discord.gg/q3rwHete"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -64,8 +68,8 @@ const Footer = () => {
 const useStyles = makeStyles((theme) => ({
   ...theme.overrides.mui,
   footer: {
-    borderTop: "10px solid #8247E5",
-    backgroundColor: "#061024",
+    borderTop: "10px solid #e39352",
+    backgroundColor: "#e39352",
     padding: "70px 0",
     position: "relative",
 
@@ -110,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
 
     "&:hover": {
       backgroundColor: "white",
-      color: "#8247E5",
+      color: "#e39352",
 
       "& svg": {
         fill: "black",

@@ -10,12 +10,12 @@ const Hero = () => {
     <div className={classes.hero}>
       <Container className={classes.container}>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={8} style={{alignItems:'center'}}>
+          <Grid item xs={12} sm={8} style={{ alignItems: "center" }}>
             <Typography variant="h1" className={classes.title}>
-              <span>NFT</span> Minter
+              <span> Philosophers</span> Minter
             </Typography>
             <Typography variant="subtitle1" className={classes.text}>
-              Mint NFT on polygon at speed of light!
+              Mint Ideas as NFT's on polygon at the speed of light!
             </Typography>
           </Grid>
           {/* <Grid item xs={12} sm={4}>
@@ -36,7 +36,7 @@ const Hero = () => {
 const useStyles = makeStyles((theme) => ({
   ...theme.overrides.mui,
   hero: {
-    backgroundColor: "#7533E2",
+    backgroundColor: "#e39352",
     padding: "70px 0",
     position: "relative",
     overflow: "hidden",
@@ -67,9 +67,9 @@ const useStyles = makeStyles((theme) => ({
   text: {
     fontSize: "15px",
     fontWeight: "500",
-    color: "#D8C4F7",
+    color: "#f7ddc4",
     lineHeight: "23px",
-    marginBottom:'40px',
+    marginBottom: "40px",
     ["@media (max-width:959px)"]: {
       marginBottom: "50px",
     },
